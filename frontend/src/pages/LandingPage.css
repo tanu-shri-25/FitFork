@@ -1,0 +1,73 @@
+.landing {}
+
+/* Hero */
+.landing-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(0,212,170,0.1);
+  border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  margin-bottom: 24px;
+}
+.landing-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.landing-hero p { font-size: 1.2rem; color: var(--text-secondary); max-width: 540px; margin: 0 auto 36px; }
+.hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+
+.hero-stats { display: flex; align-items: center; justify-content: center; gap: 24px; }
+.hero-stat { text-align: center; }
+.hero-stat-val { display: block; font-size: 1.6rem; font-weight: 800; color: var(--accent-teal); }
+.hero-stat span:last-child { font-size: 0.85rem; color: var(--text-secondary); }
+.hero-stat-div { width: 1px; height: 40px; background: var(--border); }
+
+/* Goals */
+.landing-section { padding: 60px 0; }
+.goal-card { padding: 28px; text-align: center; cursor: default; }
+.goal-card h3 { font-size: 1rem; font-weight: 700; margin: 12px 0 6px; }
+.goal-card p { font-size: 0.82rem; color: var(--text-secondary); }
+.goal-icon { font-size: 2.5rem; }
+.goal-teal { border-color: rgba(0,212,170,0.3); }
+.goal-teal:hover { box-shadow: var(--glow-teal); }
+.goal-blue { border-color: rgba(59,130,246,0.3); }
+.goal-lime { border-color: rgba(168,224,99,0.3); }
+.goal-purple { border-color: rgba(139,92,246,0.3); }
+
+/* Steps */
+.step-card { text-align: left; }
+.step-num { font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
+.step-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+.step-card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* Features */
+.landing-features { display: flex; flex-direction: column; gap: 20px; max-width: 700px; margin: 0 auto; }
+.feature-item { display: flex; gap: 20px; align-items: flex-start; }
+.feature-icon { width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.feature-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.feature-item p { font-size: 0.88rem; color: var(--text-secondary); }
+
+/* CTA Banner */
+.landing-cta-banner {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, transparent, rgba(0,212,170,0.04));
+  margin-top: 20px;
+}
+.landing-cta-banner h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+.landing-cta-banner p { color: var(--text-secondary); margin-bottom: 32px; }
+
+@media (max-width: 640px) {
+  .landing-hero h1 { font-size: 2.5rem; }
+  .hero-stats { gap: 16px; }
+}

@@ -1,0 +1,94 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 11, 24, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(56, 109, 201, 0.2);
+  padding: 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 24px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+.nav-logo svg { color: var(--accent-teal); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+.nav-link:hover { background: rgba(255,255,255,0.06); color: var(--text-primary); }
+.nav-link.active { background: rgba(0,212,170,0.12); color: var(--accent-teal); font-weight: 600; }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.nav-auth { display: flex; align-items: center; gap: 8px; }
+.nav-user { display: flex; align-items: center; gap: 10px; }
+.nav-user-info { display: flex; align-items: center; gap: 8px; }
+.nav-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(0,212,170,0.15);
+  border: 1px solid rgba(0,212,170,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent-teal);
+}
+.nav-username { font-size: 0.875rem; font-weight: 600; }
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: rgba(5,11,24,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 16px;
+    gap: 4px;
+    justify-content: flex-start;
+  }
+  .nav-links.open { display: flex; }
+  .nav-link { width: 100%; }
+  .nav-hamburger { display: flex; }
+  .nav-username { display: none; }
+}
